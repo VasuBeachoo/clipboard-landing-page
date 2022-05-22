@@ -1,0 +1,106 @@
+// VARIABLES /////////////////////////////
+
+$colors: (
+  Strong-cyan: hsl(171, 66%, 44%),
+  Light-blue: hsl(233, 100%, 69%),
+  Dark-grayish-blue: hsl(210, 10%, 33%),
+  Grayish-blue: hsl(201, 11%, 66%),
+);
+
+$landing-font: "Bai Jamjuree", sans-serif;
+
+///////////////////////////////////////
+// MIXINS /////////////////////////////
+
+@mixin flex($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+///////////////////////////////////////
+// FUNCTIONS /////////////////////////////
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+///////////////////////////////////////
+// STYLES /////////////////////////////
+
+body {
+  margin: 0;
+}
+
+.page-container {
+  @include flex(row, center, center);
+}
+
+.page {
+  @include flex(column, flex-start, center);
+}
+
+.header {
+  @include flex(column, flex-start, center);
+
+  &__btn-container {
+    @include flex(row, center, center);
+  }
+}
+
+.snippets {
+  @include flex(column, flex-start, center);
+
+  &__img-text-container {
+    @include flex(row, flex-start, center);
+  }
+
+  &__text-container {
+    @include flex(column, flex-start, flex-start);
+  }
+
+  &__container-item {
+    @include flex(column, flex-start, flex-start);
+  }
+}
+
+.access {
+  @include flex(column, flex-start, center);
+}
+
+.supercharge {
+  @include flex(column, flex-start, center);
+
+  &__img-text-container {
+    @include flex(row, center, center);
+  }
+
+  &__container-item {
+    @include flex(column, flex-start, center);
+  }
+}
+
+.used-by {
+  @include flex(row, center, center);
+}
+
+.cta {
+  @include flex(column, flex-start, center);
+
+  &__btn-container {
+    @include flex(row, center, center);
+  }
+}
+
+.footer {
+  @include flex(row, flex-start, center);
+
+  &__link-column {
+    @include flex(column, flex-start, center);
+  }
+
+  &__icons-container {
+    @include flex(row, center, center);
+  }
+}
