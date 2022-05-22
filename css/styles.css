@@ -69,11 +69,11 @@ body {
 .header__paragraph {
   color: #9fabb2;
   font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 28px;
   font-size: 18.5px;
   text-align: center;
   width: 50%;
-  letter-spacing: 0.5px;
-  line-height: 25px;
   margin-top: 17px;
   margin-bottom: 35px;
 }
@@ -92,7 +92,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 430px;
-  margin-bottom: 150px;
+  margin-bottom: 120px;
 }
 
 .header__btn {
@@ -141,6 +141,25 @@ body {
           align-items: center;
 }
 
+.snippets__heading {
+  color: #4c545d;
+  font-weight: 600;
+  font-size: 34px;
+  margin-bottom: 0;
+}
+
+.snippets__paragraph {
+  color: #9fabb2;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 28px;
+  font-size: 17px;
+  width: 50%;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 85px;
+}
+
 .snippets__img-text-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -152,9 +171,17 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 110px;
+}
+
+.snippets__img {
+  width: 700px;
+  -webkit-transform: translate(-160px, 0);
+          transform: translate(-160px, 0);
+  overflow: hidden;
 }
 
 .snippets__text-container {
@@ -165,12 +192,15 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  height: 370px;
+  -webkit-transform: translate(-50px, 30px);
+          transform: translate(-50px, 30px);
 }
 
 .snippets__container-item {
@@ -187,6 +217,23 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+.snippets__item-heading {
+  color: #4c545d;
+  font-weight: 600;
+  font-size: 22px;
+  margin: 0 0 10px;
+}
+
+.snippets__item-text {
+  color: #9fabb2;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 28px;
+  font-size: 15.5px;
+  width: 350px;
+  margin: 0;
 }
 
 .access {
