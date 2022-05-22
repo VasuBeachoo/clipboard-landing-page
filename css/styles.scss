@@ -5,6 +5,7 @@ $colors: (
   Light-blue: hsl(233, 100%, 69%),
   Dark-grayish-blue: hsl(210, 10%, 33%),
   Grayish-blue: hsl(201, 11%, 66%),
+  White: hsl(0, 100%, 100%),
 );
 
 $landing-font: "Bai Jamjuree", sans-serif;
@@ -17,6 +18,45 @@ $landing-font: "Bai Jamjuree", sans-serif;
   flex-direction: $direction;
   justify-content: $justify;
   align-items: $align;
+}
+
+@mixin heading() {
+  color: color(Dark-grayish-blue);
+  font-weight: 600;
+}
+
+@mixin paragraph() {
+  color: color(Grayish-blue);
+  font-weight: 400;
+}
+
+@mixin download-btn() {
+  color: color(White);
+  font-size: 15px;
+  font-weight: 600;
+  font-family: $landing-font;
+  width: 200px;
+  letter-spacing: 1px;
+  padding: 15px 28px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  text-align: center;
+  transition: 0.25s;
+
+  &--cyan {
+    background-color: color(Strong-cyan);
+  }
+
+  &--blue {
+    background-color: color(Light-blue);
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
 }
 
 ///////////////////////////////////////
@@ -35,17 +75,49 @@ body {
 
 .page-container {
   @include flex(row, center, center);
+  min-height: 100vh;
 }
 
 .page {
   @include flex(column, flex-start, center);
+  font-family: $landing-font;
 }
 
 .header {
   @include flex(column, flex-start, center);
+  background: url("../images/bg-header-desktop.png") no-repeat;
+  width: 100%;
+
+  &__logo {
+    width: 100px;
+    margin-top: 100px;
+  }
+
+  &__heading {
+    @include heading();
+    font-size: 38px;
+    margin-bottom: 0;
+  }
+
+  &__paragraph {
+    @include paragraph();
+    font-size: 18.5px;
+    text-align: center;
+    width: 50%;
+    letter-spacing: 0.5px;
+    line-height: 25px;
+    margin-top: 17px;
+    margin-bottom: 35px;
+  }
 
   &__btn-container {
-    @include flex(row, center, center);
+    @include flex(row, space-around, center);
+    width: 430px;
+    margin-bottom: 150px;
+  }
+
+  &__btn {
+    @include download-btn();
   }
 }
 
