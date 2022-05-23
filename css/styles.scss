@@ -6,6 +6,7 @@ $colors: (
   Dark-grayish-blue: hsl(210, 10%, 33%),
   Grayish-blue: hsl(201, 11%, 66%),
   White: hsl(0, 100%, 100%),
+  Light-gray: rgba(241, 243, 243, 0.5),
 );
 
 $landing-font: "Bai Jamjuree", sans-serif;
@@ -271,12 +272,50 @@ body {
 
 .footer {
   @include flex(row, flex-start, center);
+  background-color: color(Light-gray);
+  width: 100%;
+  height: 150px;
+
+  &__logo {
+    width: 50px;
+    margin-left: 170px;
+    margin-right: 80px;
+  }
 
   &__link-column {
-    @include flex(column, flex-start, center);
+    @include flex(column, flex-start, flex-start);
+    margin: 0 38px;
+  }
+
+  &__link {
+    color: color(Dark-grayish-blue);
+    font-weight: 600;
+    margin: 10px 0;
+    transition: 0.1s;
+
+    &:hover {
+      cursor: pointer;
+      color: color(Strong-cyan);
+    }
   }
 
   &__icons-container {
-    @include flex(row, center, center);
+    @include flex(row, space-between, center);
+    width: 120px;
+    margin-left: 190px;
   }
+
+  &__icon {
+    transition: 0.1s;
+
+    &:hover {
+      cursor: pointer;
+      filter: invert(57%) sepia(50%) saturate(597%) hue-rotate(121deg)
+        brightness(96%) contrast(90%);
+    }
+  }
+}
+
+#install-link {
+  margin-bottom: 50px;
 }
