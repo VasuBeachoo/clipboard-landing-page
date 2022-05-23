@@ -158,14 +158,12 @@ body {
 
   &__img {
     width: 700px;
-    transform: translate(-160px, 0);
-    overflow: hidden;
   }
 
   &__text-container {
-    @include flex(column, space-between, flex-start);
-    height: 370px;
-    transform: translate(-50px, 30px);
+    @include flex(column, space-around, flex-start);
+    height: 400px;
+    margin-left: 40px;
   }
 
   &__container-item {
@@ -201,7 +199,7 @@ body {
   }
 
   &__img {
-    margin-bottom: 70px;
+    margin-bottom: 50px;
   }
 }
 
@@ -367,12 +365,12 @@ body {
 
     &__img-text-container {
       @include flex(column, flex-start, center);
-      margin-bottom: 70px;
+      margin-bottom: 60px;
     }
 
     &__text-container {
-      transform: none;
       margin-top: 60px;
+      margin-left: 0;
     }
 
     &__container-item {
@@ -381,7 +379,6 @@ body {
 
     &__img {
       width: 300px;
-      transform: none;
     }
   }
 
