@@ -252,6 +252,29 @@ body {
           align-items: center;
 }
 
+.access__heading {
+  color: #4c545d;
+  font-weight: 600;
+  font-size: 34px;
+  margin-bottom: 0;
+}
+
+.access__paragraph {
+  color: #9fabb2;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 28px;
+  font-size: 17px;
+  width: 72%;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+
+.access__img {
+  margin-bottom: 80px;
+}
+
 .supercharge {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -10,6 +10,9 @@ $colors: (
 
 $landing-font: "Bai Jamjuree", sans-serif;
 
+$section-heading-font-size: 34px;
+$section-paragraph-font-size: 17px;
+
 ///////////////////////////////////////
 // MIXINS /////////////////////////////
 
@@ -126,13 +129,13 @@ body {
 
   &__heading {
     @include heading();
-    font-size: 34px;
+    font-size: $section-heading-font-size;
     margin-bottom: 0;
   }
 
   &__paragraph {
     @include paragraph();
-    font-size: 17px;
+    font-size: $section-paragraph-font-size;
     width: 50%;
     text-align: center;
     margin-top: 20px;
@@ -176,6 +179,25 @@ body {
 
 .access {
   @include flex(column, flex-start, center);
+
+  &__heading {
+    @include heading();
+    font-size: $section-heading-font-size;
+    margin-bottom: 0;
+  }
+
+  &__paragraph {
+    @include paragraph();
+    font-size: $section-paragraph-font-size;
+    width: 72%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 80px;
+  }
+
+  &__img {
+    margin-bottom: 80px;
+  }
 }
 
 .supercharge {
