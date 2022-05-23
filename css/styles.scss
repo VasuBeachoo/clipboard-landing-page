@@ -16,6 +16,8 @@ $section-paragraph-font-size: 17px;
 
 $btn-container-width: 430px;
 
+$mobile-width: 1200px;
+
 ///////////////////////////////////////
 // MIXINS /////////////////////////////
 
@@ -68,6 +70,12 @@ $btn-container-width: 430px;
   &:hover {
     cursor: pointer;
     opacity: 0.7;
+  }
+}
+
+@mixin mobile() {
+  @media (max-width: $mobile-width) {
+    @content;
   }
 }
 
@@ -318,4 +326,152 @@ body {
 
 #install-link {
   margin-bottom: 50px;
+}
+
+@include mobile() {
+  .page {
+    text-align: center;
+  }
+
+  .header {
+    &__heading {
+      width: 80%;
+    }
+
+    &__paragraph {
+      width: 80%;
+    }
+
+    &__btn-container {
+      @include flex(column, flex-start, center);
+      width: 100%;
+      margin-bottom: 70px;
+    }
+
+    &__btn {
+      width: 80%;
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .snippets {
+    &__heading {
+      width: 80%;
+    }
+
+    &__paragraph {
+      width: 80%;
+      margin-bottom: 50px;
+    }
+
+    &__img-text-container {
+      @include flex(column, flex-start, center);
+      margin-bottom: 70px;
+    }
+
+    &__text-container {
+      transform: none;
+      margin-top: 60px;
+    }
+
+    &__container-item {
+      align-items: center;
+    }
+
+    &__img {
+      width: 300px;
+      transform: none;
+    }
+  }
+
+  .access {
+    &__heading {
+      width: 80%;
+    }
+
+    &__paragraph {
+      width: 80%;
+      margin-bottom: 50px;
+    }
+
+    &__img {
+      width: 380px;
+      margin-bottom: 60px;
+    }
+  }
+
+  .supercharge {
+    &__heading {
+      width: 80%;
+    }
+
+    &__paragraph {
+      width: 80%;
+    }
+
+    &__img-text-container {
+      @include flex(column, flex-start, center);
+      margin-bottom: 20px;
+    }
+
+    &__container-item {
+      height: 100%;
+      margin-bottom: 50px;
+    }
+  }
+
+  .used-by {
+    @include flex(column, flex-start, center);
+    margin-bottom: 70px;
+
+    &__logo {
+      margin: 30px 0;
+    }
+  }
+
+  .cta {
+    &__heading {
+      width: 80%;
+    }
+
+    &__paragraph {
+      width: 80%;
+    }
+
+    &__btn-container {
+      @include flex(column, flex-start, center);
+      width: 100%;
+      margin-bottom: 70px;
+    }
+
+    &__btn {
+      width: 80%;
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .footer {
+    @include flex(column, flex-start, center);
+    height: 100%;
+    padding: 50px 0;
+
+    &__logo {
+      margin: 0 0 31px 0;
+    }
+
+    &__link-column {
+      align-items: center;
+      margin: 0;
+    }
+
+    &__link {
+      margin: 10px 0;
+    }
+
+    &__icons-container {
+      margin: 0;
+    }
+  }
 }
