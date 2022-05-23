@@ -13,6 +13,8 @@ $landing-font: "Bai Jamjuree", sans-serif;
 $section-heading-font-size: 34px;
 $section-paragraph-font-size: 17px;
 
+$btn-container-width: 430px;
+
 ///////////////////////////////////////
 // MIXINS /////////////////////////////
 
@@ -25,14 +27,18 @@ $section-paragraph-font-size: 17px;
 
 @mixin heading() {
   color: color(Dark-grayish-blue);
+  font-size: $section-heading-font-size;
   font-weight: 600;
+  margin-bottom: 0;
 }
 
 @mixin paragraph() {
   color: color(Grayish-blue);
+  font-size: $section-paragraph-font-size;
   font-weight: 400;
   letter-spacing: 0.5px;
   line-height: 28px;
+  margin-top: 20px;
 }
 
 @mixin download-btn() {
@@ -101,7 +107,6 @@ body {
   &__heading {
     @include heading();
     font-size: 38px;
-    margin-bottom: 0;
   }
 
   &__paragraph {
@@ -109,13 +114,12 @@ body {
     font-size: 18.5px;
     text-align: center;
     width: 50%;
-    margin-top: 17px;
     margin-bottom: 35px;
   }
 
   &__btn-container {
     @include flex(row, space-around, center);
-    width: 430px;
+    width: $btn-container-width;
     margin-bottom: 120px;
   }
 
@@ -129,16 +133,12 @@ body {
 
   &__heading {
     @include heading();
-    font-size: $section-heading-font-size;
-    margin-bottom: 0;
   }
 
   &__paragraph {
     @include paragraph();
-    font-size: $section-paragraph-font-size;
     width: 50%;
     text-align: center;
-    margin-top: 20px;
     margin-bottom: 85px;
   }
 
@@ -182,16 +182,12 @@ body {
 
   &__heading {
     @include heading();
-    font-size: $section-heading-font-size;
-    margin-bottom: 0;
   }
 
   &__paragraph {
     @include paragraph();
-    font-size: $section-paragraph-font-size;
     width: 72%;
     text-align: center;
-    margin-top: 20px;
     margin-bottom: 80px;
   }
 
@@ -205,14 +201,10 @@ body {
 
   &__heading {
     @include heading();
-    font-size: $section-heading-font-size;
-    margin: 0;
   }
 
   &__paragraph {
     @include paragraph();
-    font-size: $section-paragraph-font-size;
-    margin-top: 20px;
     margin-bottom: 85px;
   }
 
@@ -236,14 +228,12 @@ body {
   &__container-heading {
     @include heading();
     font-size: 25px;
-    margin-bottom: 0;
   }
 
   &__container-paragraph {
     @include paragraph();
     font-size: 15px;
     width: 85%;
-    margin-top: 20px;
   }
 }
 
@@ -255,9 +245,27 @@ body {
 
 .cta {
   @include flex(column, flex-start, center);
+  width: 100%;
+
+  &__heading {
+    @include heading();
+  }
+
+  &__paragraph {
+    @include paragraph();
+    width: 55%;
+    text-align: center;
+    margin-bottom: 35px;
+  }
 
   &__btn-container {
-    @include flex(row, center, center);
+    @include flex(row, space-around, center);
+    width: $btn-container-width;
+    margin-bottom: 110px;
+  }
+
+  &__btn {
+    @include download-btn();
   }
 }
 

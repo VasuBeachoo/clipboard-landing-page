@@ -61,20 +61,22 @@ body {
 
 .header__heading {
   color: #4c545d;
+  font-size: 34px;
   font-weight: 600;
-  font-size: 38px;
   margin-bottom: 0;
+  font-size: 38px;
 }
 
 .header__paragraph {
   color: #9fabb2;
+  font-size: 17px;
   font-weight: 400;
   letter-spacing: 0.5px;
   line-height: 28px;
+  margin-top: 20px;
   font-size: 18.5px;
   text-align: center;
   width: 50%;
-  margin-top: 17px;
   margin-bottom: 35px;
 }
 
@@ -143,20 +145,20 @@ body {
 
 .snippets__heading {
   color: #4c545d;
-  font-weight: 600;
   font-size: 34px;
+  font-weight: 600;
   margin-bottom: 0;
 }
 
 .snippets__paragraph {
   color: #9fabb2;
+  font-size: 17px;
   font-weight: 400;
   letter-spacing: 0.5px;
   line-height: 28px;
-  font-size: 17px;
+  margin-top: 20px;
   width: 50%;
   text-align: center;
-  margin-top: 20px;
   margin-bottom: 85px;
 }
 
@@ -221,16 +223,20 @@ body {
 
 .snippets__item-heading {
   color: #4c545d;
+  font-size: 34px;
   font-weight: 600;
+  margin-bottom: 0;
   font-size: 22px;
   margin: 0 0 10px;
 }
 
 .snippets__item-text {
   color: #9fabb2;
+  font-size: 17px;
   font-weight: 400;
   letter-spacing: 0.5px;
   line-height: 28px;
+  margin-top: 20px;
   font-size: 15.5px;
   width: 350px;
   margin: 0;
@@ -254,20 +260,20 @@ body {
 
 .access__heading {
   color: #4c545d;
-  font-weight: 600;
   font-size: 34px;
+  font-weight: 600;
   margin-bottom: 0;
 }
 
 .access__paragraph {
   color: #9fabb2;
+  font-size: 17px;
   font-weight: 400;
   letter-spacing: 0.5px;
   line-height: 28px;
-  font-size: 17px;
+  margin-top: 20px;
   width: 72%;
   text-align: center;
-  margin-top: 20px;
   margin-bottom: 80px;
 }
 
@@ -293,17 +299,17 @@ body {
 
 .supercharge__heading {
   color: #4c545d;
-  font-weight: 600;
   font-size: 34px;
-  margin: 0;
+  font-weight: 600;
+  margin-bottom: 0;
 }
 
 .supercharge__paragraph {
   color: #9fabb2;
+  font-size: 17px;
   font-weight: 400;
   letter-spacing: 0.5px;
   line-height: 28px;
-  font-size: 17px;
   margin-top: 20px;
   margin-bottom: 85px;
 }
@@ -351,19 +357,21 @@ body {
 
 .supercharge__container-heading {
   color: #4c545d;
+  font-size: 34px;
   font-weight: 600;
-  font-size: 25px;
   margin-bottom: 0;
+  font-size: 25px;
 }
 
 .supercharge__container-paragraph {
   color: #9fabb2;
+  font-size: 17px;
   font-weight: 400;
   letter-spacing: 0.5px;
   line-height: 28px;
+  margin-top: 20px;
   font-size: 15px;
   width: 85%;
-  margin-top: 20px;
 }
 
 .used-by {
@@ -397,6 +405,26 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+}
+
+.cta__heading {
+  color: #4c545d;
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.cta__paragraph {
+  color: #9fabb2;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 28px;
+  margin-top: 20px;
+  width: 55%;
+  text-align: center;
+  margin-bottom: 35px;
 }
 
 .cta__btn-container {
@@ -407,12 +435,43 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 430px;
+  margin-bottom: 110px;
+}
+
+.cta__btn {
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Bai Jamjuree", sans-serif;
+  width: 200px;
+  letter-spacing: 1px;
+  padding: 15px 28px;
+  border: none;
+  border-radius: 30px;
+  -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  text-align: center;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.cta__btn--cyan {
+  background-color: #26baa4;
+}
+
+.cta__btn--blue {
+  background-color: #6173ff;
+}
+
+.cta__btn:hover {
+  cursor: pointer;
+  opacity: 0.7;
 }
 
 .footer {
