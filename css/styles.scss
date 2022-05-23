@@ -248,7 +248,9 @@ body {
 }
 
 .used-by {
-  @include flex(row, center, center);
+  @include flex(row, space-around, center);
+  width: 100%;
+  margin-bottom: 110px;
 }
 
 .cta {
