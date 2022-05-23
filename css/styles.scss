@@ -196,19 +196,54 @@ body {
   }
 
   &__img {
-    margin-bottom: 80px;
+    margin-bottom: 70px;
   }
 }
 
 .supercharge {
   @include flex(column, flex-start, center);
 
+  &__heading {
+    @include heading();
+    font-size: $section-heading-font-size;
+    margin: 0;
+  }
+
+  &__paragraph {
+    @include paragraph();
+    font-size: $section-paragraph-font-size;
+    margin-top: 20px;
+    margin-bottom: 85px;
+  }
+
   &__img-text-container {
     @include flex(row, center, center);
+    width: 100%;
   }
 
   &__container-item {
     @include flex(column, flex-start, center);
+    width: 70%;
+    height: 350px;
+    text-align: center;
+  }
+
+  &__container-img {
+    height: 37px;
+    margin-bottom: 15px;
+  }
+
+  &__container-heading {
+    @include heading();
+    font-size: 25px;
+    margin-bottom: 0;
+  }
+
+  &__container-paragraph {
+    @include paragraph();
+    font-size: 15px;
+    width: 85%;
+    margin-top: 20px;
   }
 }
 
